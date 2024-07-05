@@ -14,6 +14,13 @@ public class Calculations
     {
         return arg1 * arg2;
     }
+    public static int div(int arg1, int arg2)
+    {
+        if (arg2 == 0) {
+            throw new IllegalArgumentException("Divider cannot be zero");
+        }
+        return arg1 / arg2;
+    }
     public static int sumOfDigits(int number)
     {
         int sum = 0;
@@ -42,7 +49,7 @@ public class Calculations
         if (divider != 0) {
             return source % divider == 0;
         } else {
-            return false;
+            throw new IllegalArgumentException("Divider cannot be zero");
         }
     }
 }

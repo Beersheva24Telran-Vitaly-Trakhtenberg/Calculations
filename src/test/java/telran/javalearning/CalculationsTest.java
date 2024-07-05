@@ -29,6 +29,14 @@ public class CalculationsTest
     }
 
     @Test
+    void divTest()
+    {
+        assertEquals(0, div(2, 3));
+        assertEquals(1, div(3, 2));
+        assertEquals(2, div(4, 2));
+    }
+
+    @Test
     void sumOfDigitsTest()
     {
         assertEquals(15, sumOfDigits(1608));
@@ -45,7 +53,7 @@ public class CalculationsTest
     {
         assertTrue(isDividedOn(14, 7));
         assertFalse(isDividedOn(16, 7));
-        assertFalse(isDividedOn(16, 0));
+        assertFalse(isDividedOn(16, 0));    // TODO java.lang.IllegalArgumentException: Divider cannot be zero
     }
 
 }
