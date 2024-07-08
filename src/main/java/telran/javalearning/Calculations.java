@@ -46,10 +46,12 @@ public class Calculations
     }
     public static boolean isDividedOn(int source, int divider)
     {
+        boolean res;
         if (divider != 0) {
-            return source % divider == 0;
+            res = source % divider == 0;
         } else {
-            throw new IllegalArgumentException("Divider cannot be zero");
+            res = false;
         }
+        return res;
     }
 }
